@@ -1,57 +1,50 @@
-<article class="hero">
-  <h2 class="hero-heading">
-    <span class="hero-heading__greeting">Hi,</span>
-    <span class="hero-heading__intro">I'm Eric Brown</span>
+<article>
+  <h2>
+    <span>Hi,</span>
+    <span>I'm Eric Brown</span>
   </h2>
-  <p class="hero-text">
+  <p>
     I’m a recent graduate of Raritan Valley Community College and an aspiring
     software developer, UI designer and game developer. I love bringing creative
     projects to life with code.
   </p>
-  <div class="hero-image">
-    <p class="placeholder-text">Photo</p>
+  <div>
+    <p>Photo</p>
   </div>
-  <button class="hero-cta link-button">
-    <a href="/about" class="link-button__link"
-      ><span class="link-button__text">More about me</span></a
-    >
+  <button>
+    <a href="/about"><span>More about me</span></a>
   </button>
 </article>
 
 <style>
 
-  :root{
-    --first-button-color: #00FF00,
-    --second-button-color:  #FF0000,
-    --third-button-color: #0000FF
-  }
-
-  .hero{
+  article {
     display: grid;
     gap: 1rem;
   }
-  .hero-heading{
+
+  h2{
     grid-column: span 2;
   }
 
-  .hero-heading > *{
+  h2 > *{
     display: block;
   }
-  .hero-text{
+  article > p{
     grid-column: 1 / span 2;
   }
-  .hero-cta{
+  button{
     grid-column: span 2;
     justify-self: center;
   }
-  .hero-cta {
+  button{
     border: none;
     border-radius: none;
     height: fit-content;
     width: fit-content;
     background: none;
   }
-  .hero-image{
+  article div{
     grid-column: span 2;
     grid-row: 2;
     background-color: black;
@@ -59,14 +52,14 @@
     width: 250px;
     justify-self: center;
   }
-  .placeholder-text{
-    color: white;
+  article div p{
+    color: var(--placeholder-text);
   }
-  .link-button__text {
+  button a span{
     display: block;
   }
 
-  .link-button__link {
+  button a {
     border: 4px outset black;
     background: green;
     display: flex;
@@ -78,23 +71,21 @@
     padding: 1rem;
     text-decoration: none;
   }
-  a:hover {
-    font-weight: unset;
-  }
-  .link-button:hover .link-button__link {
+
+  button:hover a {
     transition: transform 100ms ease-in;
     transform: scale(1.1, 1.1);
   }
 
-  .link-button__link:active {
+  a:active {
     border: 4px inset black;
   }
   @media (min-width: 768px){
-    .hero-image{
+    article div{
       grid-column: 2/span 1;
       grid-row: unset;
     }
-    .hero-text{
+    article p{
       grid-row: 2;
       grid-column: 1 / span 1;
     }

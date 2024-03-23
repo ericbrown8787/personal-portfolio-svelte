@@ -21,6 +21,6 @@
       me.
     </p>
   </section>
+  <img src="" alt="My face" class="about-image" />
 </article>
 
-<img src="" alt="A photo of me" class="about-image" />
