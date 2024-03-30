@@ -18,6 +18,7 @@
 :global(:root){
     --main-text-color: #042F2E;
     --main-background-color: #F0FDFA; 
+    --accent-color: #f472b6;
     --first-button-color: #00FF00;
     --second-button-color:  #FF0000;
     --third-button-color: #0000FF;
@@ -31,7 +32,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: monospace;
 }
 :global(a) {
   text-decoration: none;
@@ -54,7 +55,6 @@
 /* Page Background */
 .app{
     background-color: var(--main-background-color);
-    
 }
 
 /* Page Layout */
