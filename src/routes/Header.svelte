@@ -1,8 +1,9 @@
 <script>
-    import logo from '$lib/images/logo.svg'
-</script>    
-    <header>
-      <article>
+import logo from '$lib/images/logo.svg'
+</script>
+
+<header>
+    <article>
         <!-- Logo -->
         <a href="/"><img src="{logo}" alt="My logo"/></a>
         <h1>Eric Brown</h1>
@@ -32,29 +33,28 @@
       </div>
 
 
-      <nav>
+    <nav>
         <ul>
-          <li >
-            <a href="/">Home</a>
-          </li>
-          <li >
-            <a href="/about">About</a>
-          </li>
-          <li >
-            <a href="/portfolio">Portfolio</a>
-          </li>
-          <li >
-            <a href="/resume">Resume</a>
-          </li>
-          <li >
-            <a href="/contact">Contact</a>
-          </li>
+            <li >
+                <a href="/">Home</a>
+            </li>
+            <li >
+                <a href="/about">About</a>
+            </li>
+            <li >
+                <a href="/portfolio">Portfolio</a>
+            </li>
+            <li >
+                <a href="/resume">Resume</a>
+            </li>
+            <li >
+                <a href="/contact">Contact</a>
+            </li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
 
     <style>
-
 /* Page Header */
 header article {
 display: flex;
@@ -90,8 +90,8 @@ nav ul {
   gap: 10px;
 }
 
-nav ul li{
-  font-size: 1.3rem;
+nav ul li {
+    font-size: 1.3rem;
 }
 
 a img {
@@ -108,7 +108,7 @@ header:has(#hamburger-menu:checked) nav ul {
 
 /* Hamburger Menu for mobile nav*/
 #hamburger-menu {
-  display: none;
+    display: none;
 }
 
 :root{
@@ -252,18 +252,20 @@ header:has(#hamburger-menu:checked) label div:nth-child(even){
 }
 
 @media (min-width: 768px) {
-  .hamburger-menu-input {
-    display: none;
-  }
-  nav{
-    position: unset;
-    grid-row: 1;
-    grid-column: 2;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+    .hamburger-menu-input {
+        display: none;
+    }
+
+    nav {
+        position: unset;
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
-    </style>
+</style>
