@@ -58,10 +58,11 @@ import Footer from './Footer.svelte'
     text-decoration: none;
 }
 
+
 /* Page Background */
 .app {
     background-color: var(--main-background-color);
-
+    overflow: hidden;
 }
 
 /* Page Layout */

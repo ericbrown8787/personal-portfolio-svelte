@@ -1,5 +1,9 @@
 <script>
 import logo from '$lib/images/logo.svg'
+function menuReset (){
+document.querySelector("#hamburger-menu").checked = false;
+}
+
 </script>
 
 <header>
@@ -22,7 +26,7 @@ import logo from '$lib/images/logo.svg'
         </div>
         <div class="hamburger-menu-panel"></div>
         <!-- <p class="nav-close-input">X</p> -->
-        <input
+        <input 
         type="checkbox"
         name="hamburger-menu"
         id="hamburger-menu"
@@ -36,19 +40,19 @@ import logo from '$lib/images/logo.svg'
     <nav>
         <ul>
             <li >
-                <a href="/">Home</a>
+                <a on:click={menuReset} href="/">Home</a>
             </li>
             <li >
-                <a href="/about">About</a>
+                <a on:click={menuReset} href="/about">About</a>
             </li>
             <li >
-                <a href="/portfolio">Portfolio</a>
+                <a on:click={menuReset} href="/portfolio">Portfolio</a>
             </li>
             <li >
-                <a href="/resume">Resume</a>
+                <a on:click={menuReset} href="/resume">Resume</a>
             </li>
             <li >
-                <a href="/contact">Contact</a>
+                <a on:click={menuReset} href="/contact">Contact</a>
             </li>
         </ul>
     </nav>
@@ -59,24 +63,38 @@ import logo from '$lib/images/logo.svg'
 header article {
 display: flex;
 align-items: center;
-
+gap: 1rem;
 } 
+
+a img {
+  min-width: 50px;
+}
+
 header {
   /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-height: 10vh;
   /* background-color: rgb(0, 0, 0, 0.1); */
   padding-inline: 10px;
   padding-block: 10px;
   border-block-end: 1px solid var(--accent-color);
 }
+:root{
+  --stage-1-time: 500ms;
+  --stage-2-time: 250ms;
+  --stage-2-delay: var(--stage-1-time);
+}
+@media (max-width: 767px){
 nav {
-  background: rgb(0,0,0,.5);
+  background: rgb(0,0,0,.8);
   /* display:none; */
   position: absolute;
-  top: 70px;
-  right: 0px;
+  height:fit-content;
+  max-width: fit-content;
+  top: 10vh;
+  right: 0;
   /* top: -100px; */
   grid-row: 2;
   grid-column: span 2;
@@ -94,16 +112,8 @@ nav ul li {
     font-size: 1.3rem;
 }
 
-a img {
-  min-width: 50px;
-}
-
-header:has(#hamburger-menu:checked) nav {
-  /* display: flex; */
-}
-
-header:has(#hamburger-menu:checked) nav ul {
-  /* display: flex; */
+header:has(#hamburger-menu:checked) nav ul li a {
+color: whitesmoke;  /* display: flex; */
 }
 
 /* Hamburger Menu for mobile nav*/
@@ -111,11 +121,7 @@ header:has(#hamburger-menu:checked) nav ul {
     display: none;
 }
 
-:root{
-  --stage-1-time: 500ms;
-  --stage-2-time: 250ms;
-  --stage-2-delay: var(--stage-1-time);
-}
+
 
 nav{
   transition: opacity var(--stage-2-time) var(--stage-2-delay),transform var(--stage-2-time);
@@ -142,6 +148,21 @@ position: relative;
 label:not(:has(div)){
   justify-self: end;
 }
+
+/* Menu Label Before Arrow */
+label:not(:has(div)):before{
+  content: "=>";
+  opacity: 0;
+  transition: opacity var(--stage-1-time) ease-in;
+}
+
+header:has(#hamburger-menu:checked) .menu-container label:not(:has(div)):before{
+  content: "=>";
+  opacity: 1;
+  transition: opacity calc(var(--stage-1-time) * .5) ease-in;
+}
+
+/* Create hamburger icon */
 label div, label div:before,label div:after{
   position: absolute;  
   display: block;
@@ -173,6 +194,7 @@ label div:after{
   z-index: -1;
   opacity: 0;
 }
+
 /* Initial states */
 label div{
   transition: transform var(--stage-2-time) var(--stage-2-delay) ease-in;
@@ -250,22 +272,30 @@ header:has(#hamburger-menu:checked) label div:nth-child(even){
   transition: transform var(--stage-2-time) var(--stage-2-delay) ease-in;
   transform: rotateZ(135deg);
 }
-
+}
 @media (min-width: 768px) {
-    .hamburger-menu-input {
+  header{
+    max-height: unset;
+  }
+    .menu-container {
         display: none;
     }
 
-    nav {
-        position: unset;
-        grid-row: 1;
-        grid-column: 2;
+    nav  ul{
+      display: flex;
+      gap: 1rem;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    nav ul li:before{
+      content: "=>";
+      color: var(--accent-color);
+        transition: opacity calc(var(--stage-1-time) * .5) ease-in;
+      opacity: 0;
+    }
+
+    nav ul li:hover:before {
+        transition: opacity calc(var(--stage-1-time) * .5) ease-in;
+      opacity: 1;
     }
 }
 </style>
