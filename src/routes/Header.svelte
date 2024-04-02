@@ -7,14 +7,14 @@ document.querySelector("#hamburger-menu").checked = false;
 </script>
 
 <header>
-    <article>
+    <article class="logo">
         <!-- Logo -->
         <a href="/"><img src="{logo}" alt="My logo"/></a>
         <h1>Eric Brown</h1>
       </article>
 
-      <div class="menu-container">
-      <label for="hamburger-menu">
+      <button class="menu-button">
+      <label for="hamburger-menu" class="hamburger-menu-input-text">
         Menu
       </label>
       <label for="hamburger-menu" class="hamburger-menu-input">
@@ -34,8 +34,7 @@ document.querySelector("#hamburger-menu").checked = false;
       />
       </label>
         
-      </div>
-
+    </button>
 
     <nav>
         <ul>
@@ -58,25 +57,18 @@ document.querySelector("#hamburger-menu").checked = false;
     </nav>
 </header>
 
-    <style>
+<style>
+
 /* Page Header */
-header article {
-display: flex;
-align-items: center;
-gap: 1rem;
-} 
-
-a img {
-  min-width: 50px;
-}
-
 header {
-  /* position: relative; */
+position: fixed;
+/* background-color: var(--panel-background-color); */
+width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 10vh;
-  /* background-color: rgb(0, 0, 0, 0.1); */
+max-height: fit-content;
+  max-width: 100vw;
   padding-inline: 10px;
   padding-block: 10px;
   border-block-end: 1px solid var(--accent-color);
@@ -86,34 +78,42 @@ header {
   --stage-2-time: 250ms;
   --stage-2-delay: var(--stage-1-time);
 }
+.logo {
+display: flex;
+align-items: center;
+gap: 1rem;
+} 
+
+a img {
+  min-width: 50px;
+}
+
 @media (max-width: 767px){
 nav {
-  background: rgb(0,0,0,.8);
-  /* display:none; */
-  position: absolute;
-  height:fit-content;
-  max-width: fit-content;
-  top: 10vh;
+  position: fixed;
+  top: 0;
   right: 0;
-  /* top: -100px; */
-  grid-row: 2;
-  grid-column: span 2;
+  left: 0;
+  margin-inline: auto;
+  max-width: fit-content;
+  background: var(--panel-background-color);
+  padding: 2em;
+  border: 1px solid var(--accent-color);
   text-align: center;
-  padding: 20px;
 }
 
 nav ul {
-  /* display: none; */
+  display:flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1em;
 }
 
 nav ul li {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 header:has(#hamburger-menu:checked) nav ul li a {
-color: whitesmoke;  /* display: flex; */
+color: whitesmoke;
 }
 
 /* Hamburger Menu for mobile nav*/
@@ -125,38 +125,44 @@ color: whitesmoke;  /* display: flex; */
 
 nav{
   transition: opacity var(--stage-2-time) var(--stage-2-delay),transform var(--stage-2-time);
-  transform: translateX(100%);
+  transform: scale(0%) translateY(0vh);
   opacity: 0;
 }
 
 header:has(#hamburger-menu:checked) nav{
   transition: opacity var(--stage-1-time),transform var(--stage-1-time);
-  transform:translateX(0%);
+  transform:scale(100%) translateY(25vh);
   opacity: 1;
 }
-.menu-container{
+
+.menu-button{
   display: flex;
   align-items: center;
   gap: .5rem;
+  background:none;
+  border: none;
+  border-radius: 15px;
 }
 
-label:has(div){
+.hamburger-menu-input{
 position: relative;
   min-width: 40px;
   min-height: 40px;
 }
-label:not(:has(div)){
+.hamburger-menu-input-text{
   justify-self: end;
+  color: black;
 }
 
 /* Menu Label Before Arrow */
-label:not(:has(div)):before{
+.hamburger-menu-input-text:before{
   content: "=>";
+  height: 100%;
   opacity: 0;
   transition: opacity var(--stage-1-time) ease-in;
 }
 
-header:has(#hamburger-menu:checked) .menu-container label:not(:has(div)):before{
+header:has(#hamburger-menu:checked) .menu-button .hamburger-menu-input-text:before{
   content: "=>";
   opacity: 1;
   transition: opacity calc(var(--stage-1-time) * .5) ease-in;
@@ -276,8 +282,9 @@ header:has(#hamburger-menu:checked) label div:nth-child(even){
 @media (min-width: 768px) {
   header{
     max-height: unset;
+    position: unset;
   }
-    .menu-container {
+    .menu-button {
         display: none;
     }
 

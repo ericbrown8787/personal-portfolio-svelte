@@ -15,6 +15,7 @@ import Footer from './Footer.svelte'
 <style>
 /* CSS Global Variables */
 :global(:root) {
+    --panel-background-color: rgb(0,0,0,.8);
     --main-text-color: #042F2E;
     --main-background-color: #F0FDFA;
     --accent-color: #f472b6;
@@ -58,13 +59,14 @@ import Footer from './Footer.svelte'
     text-decoration: none;
 }
 
-
+main{
+    margin-block-start: 8em;
+}
 /* Page Background */
 .app {
     background-color: var(--main-background-color);
     overflow: hidden;
 }
-
 /* Page Layout */
 .app {
     min-height: 100vh;
