@@ -5,7 +5,7 @@
     export let projects;
 </script>
 <section>
-    <h2>{title}</h2>
+    <h3>{title}</h3>
     <p>{description}</p>
     {#each projects as project}
     <Project title={project["title"]} description={project["description"]}/>    
