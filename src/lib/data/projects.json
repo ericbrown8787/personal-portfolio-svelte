@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "title": "Web Development",
+      "description": "My web development projects.",
+      "projects": []
+    },
+    {
+      "title": "Game Development",
+      "description": "My game development projects.",
+      "projects": [
+        {
+          "title": "They Keep The Lights On At Night",
+          "screenshotURL": "theykeepthelightsonatnight.png",
+          "description": "Explore an empty office building at night. Watch out for jumpscares.",
+          "repoURL": "https://www.github.com",
+          "liveURL": "https://itch.io"
+        }
+      ]
+    },
+    {
+      "title": "Specialty",
+      "description": "Projects designed for physical installations",
+      "projects": []
+    },
+    {
+      "title": "Sketches, Experiments and Toys",
+      "description": "Ideas I'm exploring",
+      "projects": []
+    }
+  ]
+}

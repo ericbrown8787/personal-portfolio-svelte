@@ -16,9 +16,12 @@
 <style>
   /* CSS Global Variables */
   :global(:root) {
-    --panel-background-color: rgb(0, 0, 0, 0.8);
-    --main-text-color: #042f2e;
-    --main-background-color: #f0fdfa;
+    --panel-background-color: rgb(0,0,0,.8);
+    /* --main-text-color: #042f2e; */
+    --main-text-color: whitesmoke;
+    --main-background-color: #112;
+    /* --main-background-color: rgb(var(--main-background-rgb)); */
+    --main-background-rgb: 240, 253, 250;
     --accent-color: #f472b6;
     --first-button-color: #00ff00;
     --second-button-color: #ff0000;
@@ -28,7 +31,7 @@
   }
 
   @font-face {
-    font-family: "Fira Code";
+    font-family: "Fira";
     src: url("/fonts/FiraCode-VariableFont_wght.ttf");
   }
 
@@ -37,6 +40,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: var(--main-text-color);
     font-family: "Fira Code", sans-serif;
   }
 

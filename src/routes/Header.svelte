@@ -58,13 +58,20 @@ document.querySelector("#hamburger-menu").checked = false;
 </header>
 
 <style>
+/* Variables */
+:root{
+  --stage-1-time: 500ms;
+  --stage-2-time: 250ms;
+  --stage-2-delay: var(--stage-1-time);
+}
 
 /* Page Header */
 header {
 position: fixed;
 /* background-color: var(--panel-background-color); */
 width: 100%;
-  display: flex;
+background-color: var(--main-background-color);
+display: flex;
   justify-content: space-between;
   align-items: center;
 max-height: fit-content;
@@ -73,17 +80,18 @@ max-height: fit-content;
   padding-block: 10px;
   border-block-end: 1px solid var(--accent-color);
 }
-:root{
-  --stage-1-time: 500ms;
-  --stage-2-time: 250ms;
-  --stage-2-delay: var(--stage-1-time);
-}
+
 .logo {
 display: flex;
 align-items: center;
 gap: 1rem;
 } 
-
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 a img {
   min-width: 50px;
 }
@@ -95,17 +103,19 @@ nav {
   right: 0;
   left: 0;
   margin-inline: auto;
-  max-width: fit-content;
+height: 100%;
+/* width: 100%; */
+  /* max-width: fit-content; */
   background: var(--panel-background-color);
-  padding: 2em;
-  border: 1px solid var(--accent-color);
+  /* padding: 2em; */
   text-align: center;
 }
 
 nav ul {
   display:flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
+  list-style-type: none;
 }
 
 nav ul li {
@@ -113,7 +123,7 @@ nav ul li {
 }
 
 header:has(#hamburger-menu:checked) nav ul li a {
-color: whitesmoke;
+/* color: whitesmoke; */
 }
 
 /* Hamburger Menu for mobile nav*/
@@ -131,7 +141,7 @@ nav{
 
 header:has(#hamburger-menu:checked) nav{
   transition: opacity var(--stage-1-time),transform var(--stage-1-time);
-  transform:scale(100%) translateY(25vh);
+  transform:scale(100%);
   opacity: 1;
 }
 
@@ -143,7 +153,9 @@ header:has(#hamburger-menu:checked) nav{
   border: none;
   border-radius: 15px;
 }
-
+.hamburger-menu-input, .hamburger-menu-input-text{
+  z-index: 2;
+}
 .hamburger-menu-input{
 position: relative;
   min-width: 40px;
@@ -151,7 +163,6 @@ position: relative;
 }
 .hamburger-menu-input-text{
   justify-self: end;
-  color: black;
 }
 
 /* Menu Label Before Arrow */
@@ -169,7 +180,7 @@ header:has(#hamburger-menu:checked) .menu-button .hamburger-menu-input-text:befo
 }
 
 /* Create hamburger icon */
-label div, label div:before,label div:after{
+.hamburger-menu-input div, .hamburger-menu-input div:before,.hamburger-menu-input div:after{
   position: absolute;  
   display: block;
   content: '';
@@ -199,16 +210,17 @@ label div:after{
   bottom: 0;
   z-index: -1;
   opacity: 0;
+  background-color:#999;
 }
 
 /* Initial states */
-label div{
+.hamburger-menu-input div{
   transition: transform var(--stage-2-time) var(--stage-2-delay) ease-in;
-  transform: rotateZ(0deg);
+    transform: rotateZ(0deg);  
 }
 
-label div:first-child, label div:first-child:before, label div:first-child:after{
-  background-color: black;
+.hamburger-menu-input div:first-child, .hamburger-menu-input div:first-child:before, .hamburger-menu-input div:first-child:after{
+  background-color: var(--accent-color);
   z-index: 1;
 }
 
@@ -278,6 +290,7 @@ header:has(#hamburger-menu:checked) label div:nth-child(even){
   transition: transform var(--stage-2-time) var(--stage-2-delay) ease-in;
   transform: rotateZ(135deg);
 }
+
 }
 @media (min-width: 768px) {
   header{
