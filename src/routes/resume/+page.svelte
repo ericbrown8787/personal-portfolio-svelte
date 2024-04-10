@@ -169,7 +169,6 @@
   .main-heading {
     width: 100%;
     content: "";
-    border-bottom: 1px solid var(--accent-color);
   }
 
   /* Margins and padding */
@@ -179,7 +178,7 @@
   .resume-list-item {
     margin-block-end: 1em;
   }
-  .main-heading,
+
   .resume-section,
   .resume-list,
   .details-list {

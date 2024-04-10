@@ -24,3 +24,21 @@
   <img src="" alt="My face" class="about-image" />
 </article>
 
+<style>
+  .about{
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .about__intro{
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about__text{
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+</style>
+

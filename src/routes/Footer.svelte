@@ -1,6 +1,6 @@
 <footer class="page-footer">
     <nav class="footer-nav">
-        <ul class="footer-nav">
+        <ul class="footer-nav__links">
             <li class="footer-nav__link">
                 <a href="/readme">Github</a>
             </li>
@@ -26,8 +26,11 @@
     align-items: center;
 }
 
-.footer-nav {
+.footer-nav__links {
+    list-style: none;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    gap: 1rem;
 }
 </style>

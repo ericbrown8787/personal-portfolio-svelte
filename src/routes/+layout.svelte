@@ -45,9 +45,16 @@
   }
 
   :global(:not(h1, h2, h3, h4, h5, dt)) {
-    line-height: 1.5;
-  }
 
+  }
+  :global(h2::after){
+
+    display: block;
+    content: "";
+    border-block-end: 5px solid var(--accent-color);
+    max-width: 5ch;
+
+  }
   :global(a) {
     text-decoration: none;
     color: var(--main-text-color);
@@ -57,9 +64,13 @@
     text-decoration: none;
     color: var(--main-text-color);
   }
+  @keyframes fadein {
 
+  }
   main {
-    margin-block-start: 8em;
+    
+    margin-block-start: 6em;
+    padding-inline: 1rem;
   }
   /* Page Background */
   .app {
