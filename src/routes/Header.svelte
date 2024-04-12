@@ -37,7 +37,7 @@ document.querySelector("#hamburger-menu").checked = false;
     </button>
 
     <nav>
-        <ul>
+      <ul>
             <li >
                 <a on:click={menuReset} href="/">Home</a>
             </li>
@@ -103,7 +103,7 @@ nav {
   right: 0;
   left: 0;
   margin-inline: auto;
-height: 100%;
+  height: 100%;
 /* width: 100%; */
   /* max-width: fit-content; */
   background: var(--panel-background-color);
@@ -120,10 +120,6 @@ nav ul {
 
 nav ul li {
     font-size: 1.5rem;
-}
-
-header:has(#hamburger-menu:checked) nav ul li a {
-/* color: whitesmoke; */
 }
 
 /* Hamburger Menu for mobile nav*/
@@ -153,6 +149,7 @@ header:has(#hamburger-menu:checked) nav{
   border: none;
   border-radius: 15px;
 }
+
 .hamburger-menu-input, .hamburger-menu-input-text{
   z-index: 2;
 }
@@ -162,6 +159,8 @@ position: relative;
   min-height: 40px;
 }
 .hamburger-menu-input-text{
+  color: var(--first-level-text-color);
+  font-size: 1.2rem;
   justify-self: end;
 }
 

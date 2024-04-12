@@ -16,6 +16,9 @@
 <style>
   /* CSS Global Variables */
   :global(:root) {
+    --first-level-text-color: #FFFFFF;
+    --second-level-text-color: #DDDDDD;
+    --third-level-text-color: #AAAAAA;
     --panel-background-color: rgb(0,0,0,.8);
     /* --main-text-color: #042f2e; */
     --main-text-color: whitesmoke;
@@ -31,7 +34,7 @@
   }
 
   @font-face {
-    font-family: "Fira";
+    font-family: "Fira Code";
     src: url("/fonts/FiraCode-VariableFont_wght.ttf");
   }
 
@@ -40,32 +43,20 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: var(--main-text-color);
+    color: var(--third-level-text-color);
     font-family: "Fira Code", sans-serif;
   }
-
-  :global(:not(h1, h2, h3, h4, h5, dt)) {
-
+  :global(h1,h2,h3){
+    color: var(--first-level-text-color);
   }
-  :global(h2::after){
-
-    display: block;
-    content: "";
-    border-block-end: 5px solid var(--accent-color);
-    max-width: 5ch;
-
+  :global(h2){
+    font-size: 2rem;
   }
-  :global(a) {
-    text-decoration: none;
-    color: var(--main-text-color);
+  :global(h3){
+    font-size: 1.5rem;
   }
-
-  :global(a:visited) {
-    text-decoration: none;
-    color: var(--main-text-color);
-  }
-  @keyframes fadein {
-
+  :global(h4,h5){
+    color: var(--second-level-text-color);
   }
   main {
     

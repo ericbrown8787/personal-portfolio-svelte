@@ -5,9 +5,21 @@
     export let projects;
 </script>
 <section>
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <h3 class="title">{title}</h3>
+    <p class="description">{description}</p>
     {#each projects as project}
     <Project title={project["title"]} description={project["description"]}/>    
     {/each}
 </section>
+
+<style>
+    section{
+        margin-block-end: 1.5rem;
+    }
+    .title{
+        margin-block-end: 1rem;
+    }
+    .description{
+        margin-block-end: 1rem;;
+    }
+</style>

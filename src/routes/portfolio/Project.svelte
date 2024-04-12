@@ -4,12 +4,6 @@
     export let screenshotURL;
     export let sourceURL;
     export let liveURL;
-
-    // $: {document.title = title;
-    // document.description = description;
-    // document.screenshotURL = screenshotURL;
-    // document.sourceURL = sourceURL
-    // document.liveURL = liveURL}
 </script>
 <article>
     <h4 class="title">
@@ -26,3 +20,12 @@
     <a href="{liveURL}" class="live-link">Live</a>
     {/if}
 </article>
+
+<style>
+    article{
+        margin-block-end: 1rem;
+    }
+    .title{
+        font-size: 1.2rem;
+    }
+</style>
