@@ -6,11 +6,10 @@
 </script>
 
 <header>
-  <article class="logo">
-    <!-- Logo -->
+  <!-- <article class="logo">
     <a href="/"><img src={logo} alt="My logo" /></a>
     <h1>Eric Brown</h1>
-  </article>
+  </article> -->
 
   <button class="menu-button">
     <label for="hamburger-menu" class="hamburger-menu-input-text"> Menu </label>
@@ -63,31 +62,31 @@
     position: fixed;
     /* background-color: var(--panel-background-color); */
     width: 100%;
-    background: url("./hexagons.svg") var(--main-background-color);
+    /* background: url("./hexagons.svg") var(--main-background-color); */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     max-height: fit-content;
     max-width: 100vw;
     padding-inline: 10px;
     padding-block: 10px;
-    border-block-end: 1px solid var(--accent-color);
+    /* border-block-end: 1px solid var(--accent-color); */
   }
 
-  .logo {
+  /* .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
+  } */
   nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  a img {
+  /* a img {
     min-width: 50px;
-  }
+  } */
 
   @media (max-width: 767px) {
     nav {
@@ -318,6 +317,7 @@
     }
 
     nav ul {
+      list-style: none;
       display: flex;
       gap: 1rem;
     }

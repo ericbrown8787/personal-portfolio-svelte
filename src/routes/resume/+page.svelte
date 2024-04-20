@@ -1,7 +1,7 @@
 <article class="resume">
-  <h2 class="main-heading">Resume</h2>
+  <h1 class="main-heading">Resume</h1>
   <section class="resume-section objective">
-    <h3 class="section-heading">Objective</h3>
+    <h2 class="section-heading">Objective</h2>
     <p class="section-text">
       Soon-to-be community college graduate with Interface Design and Web
       Development A.A.S. and technical experience seeking a web development,
@@ -9,7 +9,7 @@
     </p>
   </section>
   <section class="resume-section education">
-    <h3 class="section-heading">Education</h3>
+    <h2 class="section-heading">Education</h2>
     <ul class="resume-list">
       <li class="resume-list-item">
         <h4 class="item-heading">
@@ -49,7 +49,7 @@
     </ul>
   </section>
   <section class="resume-section skills">
-    <h3 class="section-heading">Skills</h3>
+    <h2 class="section-heading">Skills</h2>
     <dl class="details-list">
       <dt class="details-heading">Programming Languages</dt>
       <dd class="details-item">JavaScript</dd>
@@ -96,10 +96,10 @@
     </dl>
   </section>
   <section class="resume-section work-experience">
-    <h3 class="section-heading">Work Experience</h3>
+    <h2 class="section-heading">Work Experience</h2>
     <ul class="resume-list">
       <li class="resume-list-item">
-        <h4 class="item-heading">IT/Accounts Receivable Specialist</h4>
+        <h4 class="item-heading">Accounts Receivable/IT Specialist</h4>
         <ul class="info-list">
           <li class="info-item">Uriel Trucking LLC</li>
           <li class="info-item">South Plainfield, New Jersey</li>
@@ -108,19 +108,19 @@
 
         <dl class="details-list">
           <dt class="details-heading">Responsibilities</dt>
+          <dd class="details-item">Creating invoices</dd>
+          <dd class="details-item">Building and maintaining spreadsheets</dd>
+          <dd class="details-item">Communicating with clients</dd>
           <dd class="details-item">
             Configuring and maintaining computer and networking equipment
           </dd>
           <dd class="details-item">
             Troubleshooting security systems and vehicle monitoring systems
           </dd>
-          <dd class="details-item">Compiling invoices</dd>
-          <dd class="details-item">Building and maintaining spreadsheets</dd>
-          <dd class="details-item">Communicating with clients</dd>
         </dl>
       </li>
       <li class="resume-list-item">
-        <h4 class="item-heading">Technician</h4>
+        <h3 class="item-heading">Technician</h3>
         <ul class="info-list">
           <li class="info-item">Maximum Security Systems</li>
           <li class="info-item">Marlboro, New Jersey</li>
@@ -142,16 +142,16 @@
     </ul>
   </section>
   <section class="resume-section projects">
-    <h3 class="section-heading">Projects</h3>
+    <h2 class="section-heading">Projects</h2>
     <ul class="resume-list">
       <li class="resume-list-item">
-        <h4 class="item-heading">Style Stage</h4>
+        <h3 class="item-heading">Style Stage</h3>
         <p class="item-description">
           Open Source Project - Contributed a CSS stylesheet.
         </p>
       </li>
       <li class="resume-list-item">
-        <h4 class="item-heading">Detective Cats and the Gilded Secret</h4>
+        <h3 class="item-heading">Detective Cats and the Gilded Secret</h3>
         <p class="item-description">
           Game(In development) - Developed a JSON-based character dialogue
           markup/parsing system.
@@ -162,8 +162,16 @@
 </article>
 
 <style>
+  .resume {
+    padding-inline: 1rem;
+    max-width: 1280px;
+  }
   li {
     list-style: none;
+  }
+  .details-heading,
+  .item-heading {
+    color: var(--first-level-text-color);
   }
 
   .main-heading {
@@ -178,40 +186,32 @@
   .resume-list-item {
     margin-block-end: 1em;
   }
-
-  .resume-section,
-  .resume-list,
   .details-list {
-    margin-inline: 1em;
-  }
-  .item-heading {
-    font-size: 1rem;
+    padding-inline: 1rem;
   }
   .details-list,
   .info-list {
     margin-block-end: 0.3em;
   }
-  .info-list {
-    padding-inline-start: 1rem;
-  }
 
   /* Lists */
-  .info-item {
-    list-style: disc;
-  }
 
   .details-heading {
     font-weight: bold;
-    font-size: 0.9rem;
-  }
-  .details-heading::after {
-    content: ": ";
+    /* font-size: 0.9rem; */
   }
   .details-item {
-    font-size: 0.8rem;
+    margin-inline-start: 1.4rem;
   }
+
   .details-item::before {
-    content: "+ ";
+    position: absolute;
+    left: 31px;
+    content: "├─ ";
+    font-weight: bold;
+  }
+  .details-item:last-child::before {
+    content: "└─ ";
     font-weight: bold;
   }
 
@@ -220,19 +220,28 @@
       display: inline;
     }
     .info-item::before {
-      content: "|";
+      content: "| ";
     }
     .info-item:first-child:before {
       display: none;
     }
-
-    .details-heading,
+    .details-item::before {
+      position: static;
+    }
+    /* .details-heading,
     .details-item {
       display: inline;
-    }
+    } */
 
-    .details-item:first-of-type::before {
-      display: none;
+    /* .details-item::before,
+    .details-item:last-child::before {
+      content: "";
+    } */
+    /* .details-heading::after {
+      content: ": ";
     }
+    .details-item::after {
+      content: ", ";
+    } */
   }
 </style>

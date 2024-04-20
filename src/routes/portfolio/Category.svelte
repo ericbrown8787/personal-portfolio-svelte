@@ -5,26 +5,47 @@
   export let projects;
 </script>
 
-<section>
-  <h3 class="title">{title}</h3>
-  <p class="description">{description}</p>
-  {#each projects as project}
-    <Project
-      title={project["title"]}
-      description={project["description"]}
-      screenshotURL={project["screenshotURL"]}
-    />
-  {/each}
+<section class="category">
+  <div class="info-container">
+    <h2 class="title">{title}</h2>
+    <p class="description">{description}</p>
+  </div>
+
+  <div class="project-container">
+    {#each projects as project, index}
+      <Project
+        title={project["title"]}
+        description={project["description"]}
+        screenshotURL={project["screenshotURL"]}
+        sourceURL={project["sourceURL"]}
+        liveURL={project["liveURL"]}
+      />
+      {#if !(index === projects.length - 1)}
+        <hr />
+      {/if}
+    {/each}
+  </div>
 </section>
 
 <style>
-  section {
+  /* section {
     margin-block-end: 1.5rem;
+  } */
+  .category {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
+
   .title {
     margin-block-end: 1rem;
   }
   .description {
+    margin-block-end: 1rem;
+  }
+
+  hr {
+    margin-block-start: 2rem;
     margin-block-end: 1rem;
   }
 </style>

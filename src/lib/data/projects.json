@@ -2,30 +2,59 @@
   "categories": [
     {
       "title": "Web Development",
-      "description": "My web development projects.",
-      "projects": []
+      "description": "Websites and miscellaneous projects using web technologies(HTML,CSS,JavaScript). I'm currently working on some backend projects as well, which I'll put up here eventually.",
+      "projects": [
+        {
+          "title": "Style Stage - Atomic Clock",
+          "screenshotURL": "stylestage.png",
+          "description": "A stylesheet that I contributed to Style Stage: a public CSS showcase maintained by Stephanie Eckles.",
+          "liveURL": "https://stylestage.dev/styles/atomic-clock/",
+          "sourceURL": "https://github.com/ericbrown8787/stylestage"
+        },
+        {
+          "title": "All The Fishes",
+          "screenshotURL": "allthefishes.png",
+          "description": "An animated, interactive virtual fish tank. A project from User Interface Programming at Raritan Valley Community College, with animations using PIXI.js. Fish sprites by Sarah Lopez.",
+          "liveURL": "https://all-the-fishes.netlify.app/",
+          "sourceURL": "https://github.com/RVCC-IDMX/all-the-fishes-ericbrown8787/tree/animation-engine"
+        },
+        {
+          "title": "Meet The Fishes",
+          "screenshotURL": "meetthefishes.png",
+          "description": "Animated character bios for \"All The Fishes\". Fish sprites by Sarah Lopez.",
+          "liveURL": "https://meet-the-fishes.netlify.app/",
+          "sourceURL": "https://github.com/RVCC-IDMX/meet-the-fishes-ericbrown8787"
+        }
+      ]
     },
     {
       "title": "Game Development",
-      "description": "My game development projects.",
+      "description": "Game prototypes. More finished projects on the way.",
       "projects": [
         {
           "title": "They Keep The Lights On At Night",
           "screenshotURL": "theykeepthelightsonatnight.png",
-          "description": "Explore an empty office building at night. Watch out for jumpscares.",
-          "repoURL": "https://www.github.com",
+          "description": "Explore an empty office building at night. Watch out for jumpscares. My final project from Fundamentals of Game Engines at Raritan Valley Community College, and my first major Unity project. The purpose was to learn Unity's various subsystems, so it's not fully implemented, but the level can be played all the way through.",
+          "sourceURL": "https://www.github.com",
           "liveURL": "https://itch.io"
+        },
+        {
+          "title": "Bustin' Through",
+          "screenshotURL": "bustinthrough.png",
+          "description": "A polished prototype of a simple interaction. Smash the glass and breach the reactor core. Why? Why not?",
+          "sourceURL": "https://www.github.com",
+          "liveURL": "https://jackalopetracks.itch.io/bustin-through"
         }
       ]
     },
     {
       "title": "Specialty",
-      "description": "Projects designed for physical installations",
+      "description": "Projects designed for physical installations. These projects are designed to be displayed on a large 4k touch display, and may require you to zoom out to view them on a normal monitor.",
       "projects": []
     },
     {
       "title": "Sketches, Experiments and Toys",
-      "description": "Ideas I'm exploring",
+      "description": "A mix of old and/or weird projects that I built to test an idea, try a new library or otherwise learn something.",
       "projects": []
     }
   ]

@@ -1,19 +1,32 @@
 <script>
-    import projects from '$lib/data/projects.json'
-    import Category from './Category.svelte';
-    const categories = projects["categories"]
+  import projects from "$lib/data/projects.json";
+  import Category from "./Category.svelte";
+  const categories = projects["categories"];
 </script>
-<article>
-    <h2 class="page-title">Portfolio</h2>
-    {#each categories as category}
-    <Category title={category["title"]} description={category["description"]} projects={category["projects"]}/>        
-    {/each}
 
+<article class="portfolio">
+  <h1 class="page-title">Portfolio</h1>
+  <div class="category-container">
+    {#each categories as category}
+      <Category
+        title={category["title"]}
+        description={category["description"]}
+        projects={category["projects"]}
+      />
+    {/each}
+  </div>
 </article>
 
 <style>
-    .page-title{
-        margin-block-end: 2rem;
-    }
-    
+  .page-title {
+    margin-block-end: 2rem;
+  }
+  .portfolio {
+    padding-inline: 1rem;
+  }
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 </style>
