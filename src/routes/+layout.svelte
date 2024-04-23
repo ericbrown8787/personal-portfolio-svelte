@@ -64,9 +64,33 @@
     font-size: clamp(1.25rem, 1.155vw + 0.951rem, 1.875rem);
   }
 
-  main {
-    margin-block-start: 4em;
+  :global(a) {
+    text-underline-offset: 0.4rem;
+    font-variation-settings: "wght" 450;
+    color: var(--first-level-text-color);
   }
+
+  :global(li:has(a):before) {
+    content: "=>";
+    padding-inline-end: 0.4rem;
+    color: var(--accent-color);
+    transition: opacity calc(var(--stage-1-time) * 0.5) ease-in;
+    opacity: 0;
+  }
+
+  :global(li:has(a):hover:before) {
+    transition: opacity calc(var(--stage-1-time) * 0.5) ease-in;
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    main {
+      /* Ensure header does not cover page content when scrolled to top in mobile view*/
+      margin-block-start: calc(
+        var(--header-block-padding) * 2 + var(--header-max-height)
+      );
+    }
+  }
+
   /* Page Background */
   .app {
     background-color: var(--main-background-color);
@@ -75,7 +99,9 @@
   /* Page Layout */
   .app {
     display: flex;
+    gap: 2rem;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     min-height: 100vh;
   }

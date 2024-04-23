@@ -15,6 +15,7 @@
     overflow: hidden;
     border: 2px solid var(--accent-color);
     gap: 1rem;
+    max-width: 70ch;
   }
 
   .window-top {
@@ -32,7 +33,7 @@
   .window-top div {
     width: 30px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: 100%;
     color: var(--accent-color);
     border: 2px solid var(--main-background-color);
     border: 2px solid rgb(15, 15, 15, 0.5);

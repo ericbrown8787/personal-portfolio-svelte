@@ -51,7 +51,12 @@
 
 <style>
   /* Variables */
+  :global(:root) {
+    --header-block-padding: 12px;
+    --header-max-height: 4rem;
+  }
   :root {
+    --link-font-size: clamp(1.5rem, 0.231vw + 0.94rem, 2rem);
     --stage-1-time: 500ms;
     --stage-2-time: 250ms;
     --stage-2-delay: var(--stage-1-time);
@@ -60,33 +65,23 @@
   /* Page Header */
   header {
     position: fixed;
-    /* background-color: var(--panel-background-color); */
     width: 100%;
-    /* background: url("./hexagons.svg") var(--main-background-color); */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-height: fit-content;
+    /* max-height: fit-content; */
+    max-height: var(--header-max-height);
     max-width: 100vw;
-    padding-inline: 10px;
-    padding-block: 10px;
-    /* border-block-end: 1px solid var(--accent-color); */
+    padding-inline: 15px;
+    padding-block: var(--header-block-padding);
   }
 
-  /* .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  } */
   nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  /* a img {
-    min-width: 50px;
-  } */
 
   @media (max-width: 767px) {
     nav {
@@ -113,7 +108,6 @@
     nav ul li {
       font-size: 1.5rem;
     }
-
     /* Hamburger Menu for mobile nav*/
     #hamburger-menu {
       display: none;
@@ -307,6 +301,25 @@
       transform: rotateZ(135deg);
     }
   }
+  nav ul li a {
+    font-size: var(--link-font-size);
+  }
+
+  @media (max-width: 767px) {
+    header {
+      z-index: 9000;
+    }
+    :global(header:has(#hamburger-menu:checked) ~ *) {
+      transition: opacity var(--stage-1-time) ease-in-out;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    :global(header ~ *) {
+      transition: opacity var(--stage-1-time) ease-in-out;
+      opacity: 1;
+    }
+  }
   @media (min-width: 768px) {
     header {
       max-height: unset;
@@ -320,18 +333,6 @@
       list-style: none;
       display: flex;
       gap: 1rem;
-    }
-
-    nav ul li:before {
-      content: "=>";
-      color: var(--accent-color);
-      transition: opacity calc(var(--stage-1-time) * 0.5) ease-in;
-      opacity: 0;
-    }
-
-    nav ul li:hover:before {
-      transition: opacity calc(var(--stage-1-time) * 0.5) ease-in;
-      opacity: 1;
     }
   }
 </style>
