@@ -4,16 +4,18 @@
 
 <article class="home">
   <Window>
-    <h1>
-      <span>Hi.</span>
-      <span>I'm Eric Brown.</span>
-    </h1>
-    <p>
-      I’m a recent graduate of Raritan Valley Community College and an aspiring
-      software developer, UI designer and game developer. I love bringing
-      creative projects to life with code.
-    </p>
-    <a href="/about">More about me</a>
+    <div class="content">
+      <h1>
+        <span>Hi.</span>
+        <span>I'm Eric Brown.</span>
+      </h1>
+      <p>
+        I’m a recent graduate of Raritan Valley Community College and an
+        aspiring software developer, UI designer and game developer. I love
+        bringing creative projects to life with code.
+      </p>
+      <a href="/about">More about me</a>
+    </div>
   </Window>
   <img class="sprite menthe" src="/sprites/MENTHE.png" alt="MENTHE" />
   <img class="sprite radiccio" src="/sprites/RADICCIO.png" alt="RADICCIO" />
@@ -26,6 +28,9 @@
 </article>
 
 <style>
+  .content {
+    max-width: 90ch;
+  }
   article {
     padding: 20px;
     overflow: hidden;

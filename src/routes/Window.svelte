@@ -21,7 +21,8 @@
     border: 2px solid var(--accent-color);
     background-color: var(--text-background-color);
     gap: 1rem;
-    max-width: 70ch;
+    /* max-width: 70ch; */
+    max-width: fit-content;
     box-shadow: var(--window-box-shadow);
     z-index: 100;
   }

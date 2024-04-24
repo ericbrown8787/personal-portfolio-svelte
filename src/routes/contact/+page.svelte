@@ -63,6 +63,8 @@
     --label-spacing: calc(var(--field-spacing) / 2);
   }
   form {
+    width: 100%;
+    max-width: 90ch;
     display: flex;
     flex-direction: column;
     gap: var(--field-spacing);
@@ -105,5 +107,11 @@
 
   input[type="submit"] {
     background-color: black;
+  }
+  @media (min-width: 768px) {
+    form {
+      min-width: 60ch;
+      padding-inline: 3rem;
+    }
   }
 </style>
