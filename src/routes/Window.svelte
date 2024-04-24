@@ -11,7 +11,7 @@
 
 <style>
   :global(:root) {
-    --window-deco-box-shadow: 3px 3px 0 black;
+    --window-deco-box-shadow: 2px 2px 0 var(--text-background-color);
     --window-box-shadow: 15px 15px 0 black;
   }
   article {
@@ -28,7 +28,7 @@
 
   .window-top {
     display: flex;
-    padding: 7px;
+    padding: 10px;
     padding-block-start: 5px;
     align-items: center;
     justify-content: flex-end;

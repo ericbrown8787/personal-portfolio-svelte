@@ -62,7 +62,7 @@
   }
 
   article:has(a:hover) .radiccio {
-    transform: rotateZ(180deg) translateY(0px);
+    transform: rotateZ(180deg) translateY(40px);
     transition: transform 500ms 250ms ease-in;
   }
 
