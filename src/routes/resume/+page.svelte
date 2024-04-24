@@ -50,50 +50,52 @@
   </section>
   <section class="resume-section skills">
     <h2 class="section-heading">Skills</h2>
-    <dl class="details-list">
-      <dt class="details-heading">Programming Languages</dt>
-      <dd class="details-item">JavaScript</dd>
-      <dd class="details-item">C#</dd>
-      <dd class="details-item">Python</dd>
-      <dd class="details-item">Java</dd>
-      <dd class="details-item">GDScript</dd>
-    </dl>
-    <dl class="details-list">
-      <dt class="details-heading">Markup, Data Formats and Stylesheets</dt>
-      <dd class="details-item">HTML</dd>
-      <dd class="details-item">Nunjucks</dd>
-      <dd class="details-item">Jinja</dd>
-      <dd class="details-item">CSS</dd>
-      <dd class="details-item">SASS</dd>
-      <dd class="details-item">JSON</dd>
-      <dd class="details-item">XML</dd>
-      <dd class="details-item">Markdown</dd>
-    </dl>
-    <dl class="details-list">
-      <dt class="details-heading">Runtimes, Libraries and Frameworks</dt>
-      <dd class="details-item">Node.js</dd>
-      <dd class="details-item">Express.js</dd>
-      <dd class="details-item">Eleventy</dd>
-      <dd class="details-item">Sveltekit</dd>
-      <dd class="details-item">Nunjucks</dd>
-      <dd class="details-item">Jinja</dd>
-      <dd class="details-item">Flask</dd>
-    </dl>
-    <dl class="details-list">
-      <dt class="details-heading">Software</dt>
-      <dd class="details-item">Git/GitHub</dd>
-      <dd class="details-item">Microsoft Visual Studio</dd>
-      <dd class="details-item">Visual Studio Code</dd>
-      <dd class="details-item">Adobe Creative Suite</dd>
-      <dd class="details-item">Unity</dd>
-      <dd class="details-item">Figma</dd>
-    </dl>
-    <dl class="details-list">
-      <dt class="details-heading">User Interface/UX</dt>
-      <dd class="details-item">Web Design</dd>
-      <dd class="details-item">Web Accessibility</dd>
-      <dd class="details-item">Game Design</dd>
-    </dl>
+    <div class="skills-container">
+      <dl class="details-list">
+        <dt class="details-heading">Programming Languages</dt>
+        <dd class="details-item">JavaScript</dd>
+        <dd class="details-item">C#</dd>
+        <dd class="details-item">Python</dd>
+        <dd class="details-item">Java</dd>
+        <dd class="details-item">GDScript</dd>
+      </dl>
+      <dl class="details-list">
+        <dt class="details-heading">Markup, Data Formats and Stylesheets</dt>
+        <dd class="details-item">HTML</dd>
+        <dd class="details-item">Nunjucks</dd>
+        <dd class="details-item">Jinja</dd>
+        <dd class="details-item">CSS</dd>
+        <dd class="details-item">SASS</dd>
+        <dd class="details-item">JSON</dd>
+        <dd class="details-item">XML</dd>
+        <dd class="details-item">Markdown</dd>
+      </dl>
+      <dl class="details-list">
+        <dt class="details-heading">Runtimes, Libraries and Frameworks</dt>
+        <dd class="details-item">Node.js</dd>
+        <dd class="details-item">Express.js</dd>
+        <dd class="details-item">Eleventy</dd>
+        <dd class="details-item">Sveltekit</dd>
+        <dd class="details-item">Nunjucks</dd>
+        <dd class="details-item">Jinja</dd>
+        <dd class="details-item">Flask</dd>
+      </dl>
+      <dl class="details-list">
+        <dt class="details-heading">Software</dt>
+        <dd class="details-item">Git/GitHub</dd>
+        <dd class="details-item">Microsoft Visual Studio</dd>
+        <dd class="details-item">Visual Studio Code</dd>
+        <dd class="details-item">Adobe Creative Suite</dd>
+        <dd class="details-item">Unity</dd>
+        <dd class="details-item">Figma</dd>
+      </dl>
+      <dl class="details-list">
+        <dt class="details-heading">User Interface/UX</dt>
+        <dd class="details-item">Web Design</dd>
+        <dd class="details-item">Web Accessibility</dd>
+        <dd class="details-item">Game Design</dd>
+      </dl>
+    </div>
   </section>
   <section class="resume-section work-experience">
     <h2 class="section-heading">Work Experience</h2>
@@ -164,7 +166,7 @@
 <style>
   .resume {
     padding-inline: 1rem;
-    max-width: 1280px;
+    /* max-width: 1280px; */
   }
   li {
     list-style: none;
@@ -181,6 +183,7 @@
 
   /* Margins and padding */
   .resume-section {
+    max-width: 72ch;
     margin-block: 3em;
   }
   .resume-list-item {
@@ -215,7 +218,30 @@
     font-weight: bold;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
+    .resume {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .main-heading,
+    .objective,
+    .skills,
+    .projects {
+      grid-column: span 2;
+    }
+    .resume-section {
+      margin-block: 0;
+    }
+    .resume-section.skills {
+      grid-row: 4;
+      max-width: unset;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
     .info-item {
       display: inline;
     }

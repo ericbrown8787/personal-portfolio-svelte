@@ -7,12 +7,15 @@
 <article class="portfolio">
   <h1 class="page-title">Portfolio</h1>
   <div class="category-container">
-    {#each categories as category}
+    {#each categories as category, index}
       <Category
         title={category["title"]}
         description={category["description"]}
         projects={category["projects"]}
       />
+      {#if !(index === categories.length - 1)}
+        <hr />
+      {/if}
     {/each}
   </div>
 </article>
@@ -28,5 +31,9 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+  hr {
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
   }
 </style>

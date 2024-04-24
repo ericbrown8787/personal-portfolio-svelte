@@ -12,6 +12,7 @@
     <h3 class="title">
       {title}
     </h3>
+
     <p class="description">{description}</p>
 
     {#if sourceURL || liveURL}
@@ -25,7 +26,6 @@
       </section>
     {/if}
   </section>
-
   {#if screenshotURL}
     <ImageWindow>
       <img src={`/screenshots/${screenshotURL}`} alt="A screenshot" />
@@ -35,14 +35,23 @@
 
 <style>
   article {
+    /* outline: 1px solid red; */
+    padding-inline: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-block-end: 1rem;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-block-end: 3rem;
   }
 
+  .links {
+    margin-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   .info {
-    max-width: 500px;
+    max-width: 50ch;
   }
   .title {
     font-size: 1.2rem;

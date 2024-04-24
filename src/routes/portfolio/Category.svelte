@@ -11,41 +11,36 @@
     <p class="description">{description}</p>
   </div>
 
-  <div class="project-container">
-    {#each projects as project, index}
-      <Project
-        title={project["title"]}
-        description={project["description"]}
-        screenshotURL={project["screenshotURL"]}
-        sourceURL={project["sourceURL"]}
-        liveURL={project["liveURL"]}
-      />
-      {#if !(index === projects.length - 1)}
+  <!-- <div class="project-container"> -->
+  {#each projects as project, index}
+    <Project
+      title={project["title"]}
+      description={project["description"]}
+      screenshotURL={project["screenshotURL"]}
+      sourceURL={project["sourceURL"]}
+      liveURL={project["liveURL"]}
+    />
+    <!-- {#if !(index === projects.length - 1)}
         <hr />
-      {/if}
-    {/each}
-  </div>
+      {/if} -->
+  {/each}
+  <!-- </div> -->
 </section>
 
 <style>
-  /* section {
-    margin-block-end: 1.5rem;
-  } */
   .category {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    /* max-width: 1200px; */
+    gap: 5rem;
   }
 
   .title {
     margin-block-end: 1rem;
   }
-  .description {
-    margin-block-end: 1rem;
-  }
 
-  hr {
-    margin-block-start: 2rem;
+  .description {
+    max-width: 72ch;
     margin-block-end: 1rem;
   }
 </style>

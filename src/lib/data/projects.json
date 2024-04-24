@@ -32,9 +32,16 @@
       "description": "Game prototypes. More finished projects on the way.",
       "projects": [
         {
+          "title": "Climbing Game Prototype",
+          "screenshotURL": "climbing.png",
+          "description": "A prototype of an infinite climbing game made in Unity. Jump between platforms. Avoid lightning bolts. See how high you can get. A mashup of mechanics from several different example projects from Programming for Game Developers at Raritan Valley Community College.",
+          "sourceURL": "https://github.com/2023-09-GDEV267/02-03-basicprototyping-ericbrown8787",
+          "liveURL": "https://jackalopetracks.itch.io/untitled-climbing-game-prototype"
+        },
+        {
           "title": "They Keep The Lights On At Night",
           "screenshotURL": "theykeepthelightsonatnight.png",
-          "description": "Explore an empty office building at night. Watch out for jumpscares. My final project from Fundamentals of Game Engines at Raritan Valley Community College, and my first major Unity project. The purpose was to learn Unity's various subsystems, so it's not fully implemented, but the level can be played all the way through.",
+          "description": "Explore an empty office building at night. Watch out for jumpscares. My final project from Fundamentals of Game Engines at Raritan Valley Community College, and my first major Unity project. The purpose was to learn Unity's various subsystems, so it's not quite fully implemented, but the level can be played all the way through.",
           "sourceURL": "https://www.github.com",
           "liveURL": "https://itch.io"
         },
@@ -44,18 +51,33 @@
           "description": "A polished prototype of a simple interaction. Smash the glass and breach the reactor core. Why? Why not?",
           "sourceURL": "https://www.github.com",
           "liveURL": "https://jackalopetracks.itch.io/bustin-through"
+        },
+        {
+          "title": "Empty Instance",
+          "screenshotURL": "emptyinstance.png",
+          "description": "One of my first attempts at making a game. A short visual novel about a slightly unhinged conversation between two strangers. Created in Ren'Py."
         }
       ]
     },
     {
-      "title": "Specialty",
-      "description": "Projects designed for physical installations. These projects are designed to be displayed on a large 4k touch display, and may require you to zoom out to view them on a normal monitor.",
-      "projects": []
-    },
-    {
       "title": "Sketches, Experiments and Toys",
       "description": "A mix of old and/or weird projects that I built to test an idea, try a new library or otherwise learn something.",
-      "projects": []
+      "projects": [
+        {
+          "title": "3D Trading Card/Character Sheet",
+          "screenshotURL": "cardflip.png",
+          "description": "This is an animated card component built using CSS. I had originally conceived of this as a concept for a card that could be used in a browser-based character sheet app for tabletop RPGs.",
+          "sourceURL": "https://github.com/RVCC-IDMX/css-card-flip-ericbrown8787",
+          "liveURL": "https://css-card-flip-ericbrown8787.netlify.app/"
+        },
+        {
+          "title": "CSS \"Platform Ticket\"",
+          "screenshotURL": "platformticket.png",
+          "description": "A re-creation of a printed \"platform ticket\" from an event held at the Metropolitan Opera House in the early 19th century. Uses CSS typography, SVG and 9(!) different web fonts.",
+          "sourceURL": "https://github.com/RVCC-IDMX/platform-ticket-ericbrown8787",
+          "liveURL": "https://platform-ticket-ericbrown8787.netlify.app/"
+        }
+      ]
     }
   ]
 }
