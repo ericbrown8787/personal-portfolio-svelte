@@ -5,7 +5,7 @@
 <div class="form-container">
   <Window>
     <h1>Contact Me</h1>
-    <form>
+    <form netlify>
       <section class="form-field">
         <label for="name">Name</label>
         <input type="text" name="first-name" id="first-name" required />
@@ -101,5 +101,9 @@
     width: 1.5rem;
     margin-inline-start: 2rem;
     accent-color: var(--accent-color);
+  }
+
+  input[type="submit"] {
+    background-color: black;
   }
 </style>
