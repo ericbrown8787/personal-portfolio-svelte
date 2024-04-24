@@ -82,6 +82,7 @@
     transition: opacity calc(var(--stage-1-time) * 0.5) ease-in;
     opacity: 1;
   }
+
   main {
     margin-block-start: var(--main-margin);
     margin-block-end: var(--main-margin);

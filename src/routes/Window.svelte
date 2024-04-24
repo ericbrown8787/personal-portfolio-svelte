@@ -15,6 +15,7 @@
     --window-box-shadow: 15px 15px 0 black;
   }
   article {
+    position: relative;
     border-radius: 15px;
     overflow: hidden;
     border: 2px solid var(--accent-color);
@@ -22,6 +23,7 @@
     gap: 1rem;
     max-width: 70ch;
     box-shadow: var(--window-box-shadow);
+    z-index: 100;
   }
 
   .window-top {
