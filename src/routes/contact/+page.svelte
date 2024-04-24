@@ -5,7 +5,7 @@
 <div class="form-container">
   <Window>
     <h1>Contact Me</h1>
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" netlify>
       <section class="form-field">
         <label for="name">Name</label>
         <input type="text" name="first-name" id="first-name" required />
