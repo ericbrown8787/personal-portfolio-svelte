@@ -43,7 +43,7 @@
   }
 
   .radiccio {
-    left: 60%;
+    left: 50%;
     transform: rotateZ(180deg) translateY(250px);
   }
 

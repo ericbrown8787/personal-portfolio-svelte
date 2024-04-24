@@ -2,7 +2,7 @@
   "categories": [
     {
       "title": "Web Development",
-      "description": "Websites and miscellaneous projects using web technologies(HTML,CSS,JavaScript). I'm currently working on some backend projects as well, which I'll put up here eventually.",
+      "description": "Websites and miscellaneous projects using web technologies(HTML,CSS,JavaScript and associated frameworks). I'm currently working on some backend projects as well, which I'll put up here eventually.",
       "projects": [
         {
           "title": "Style Stage - Atomic Clock",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Game Development",
-      "description": "Game prototypes. More finished projects on the way.",
+      "description": "Game prototypes, mostly using Unity with C#.",
       "projects": [
         {
           "title": "Climbing Game Prototype",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Sketches, Experiments and Toys",
-      "description": "A mix of old and/or weird projects that I built to test an idea, try a new library or otherwise learn something.",
+      "description": "A mix of weird stuff that I built to test an idea, try a new library or otherwise learn something.",
       "projects": [
         {
           "title": "3D Trading Card/Character Sheet",

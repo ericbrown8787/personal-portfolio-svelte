@@ -27,7 +27,7 @@
           hesitate to contact me.
         </p>
       </section>
-      <img src="" alt="My face" class="about-image" />
+      <!-- <img src="" alt="My face" class="about-image" /> -->
     </Window>
   </div>
 </article>

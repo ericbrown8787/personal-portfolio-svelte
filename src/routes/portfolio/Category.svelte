@@ -40,7 +40,7 @@
   }
 
   .description {
-    max-width: 72ch;
+    max-width: 90ch;
     margin-block-end: 1rem;
   }
 </style>
