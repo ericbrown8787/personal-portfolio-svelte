@@ -12,7 +12,7 @@ return {
 	assets: new Set(["favicon.png","fonts/FiraCode-VariableFont_wght.ttf","hexagons.svg","screenshots/allthefishes.png","screenshots/bustinthrough.png","screenshots/cardflip.png","screenshots/climbing.png","screenshots/emptyinstance.png","screenshots/meetthefishes.png","screenshots/platformticket.png","screenshots/stylestage.png","screenshots/theykeepthelightsonatnight.png","sprites/FROBERT.png","sprites/MENTHE.png","sprites/RADICCIO.png","sprites/SMOKESTACK.png"]),
 	mimeTypes: {".png":"image/png",".ttf":"font/ttf",".svg":"image/svg+xml"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.DSoAWo3-.js","app":"_app/immutable/entry/app.BF-PWSxt.js","imports":["_app/immutable/entry/start.DSoAWo3-.js","_app/immutable/chunks/entry.YniKV1-2.js","_app/immutable/chunks/scheduler.Cs0xm5t1.js","_app/immutable/entry/app.BF-PWSxt.js","_app/immutable/chunks/scheduler.Cs0xm5t1.js","_app/immutable/chunks/index.aCh3FdRp.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.RPIw-qoK.js","app":"_app/immutable/entry/app.DE2guG8B.js","imports":["_app/immutable/entry/start.RPIw-qoK.js","_app/immutable/chunks/entry.BWt34m_7.js","_app/immutable/chunks/scheduler.Cs0xm5t1.js","_app/immutable/entry/app.DE2guG8B.js","_app/immutable/chunks/scheduler.Cs0xm5t1.js","_app/immutable/chunks/index.aCh3FdRp.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../server/nodes/0.js')),
 			__memo(() => import('../server/nodes/1.js')),

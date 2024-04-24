@@ -37,13 +37,14 @@
     z-index: 0;
   }
   .menthe {
-    top: 0;
+    bottom: 0;
+    /* top: 0; */
     transform: translateY(200px);
   }
 
   .radiccio {
     left: 60%;
-    transform: rotateZ(180deg) translateY(200px);
+    transform: rotateZ(180deg) translateY(250px);
   }
 
   .frobert {
@@ -52,8 +53,8 @@
   }
 
   .smokestack {
-    top: 0;
-    transform: translateX(400px) translateY(200px);
+    bottom: 0;
+    transform: translateX(300px) translateY(250px);
   }
   article:has(a:hover) .menthe {
     transition: transform 500ms 50ms ease-in;
@@ -71,7 +72,7 @@
   }
 
   article:has(a:hover) .smokestack {
-    transform: translateX(400px) translateY(20px);
+    transform: translateX(300px) translateY(20px);
     transition: transform 500ms 1000ms ease-in;
   }
 
