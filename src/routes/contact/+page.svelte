@@ -6,6 +6,7 @@
   <Window>
     <h1>Contact Me</h1>
     <form method="POST" name="contact" netlify="true" data-netlify="true">
+<input type="hidden" name="form-name" value="contact" />
       <section class="form-field">
         <label for="name">Name</label>
         <input type="text" name="first-name" id="first-name" required />
